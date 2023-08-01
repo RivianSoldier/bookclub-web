@@ -24,8 +24,6 @@ export const LoginScreen = () => {
     }
   })
 
-  console.log({ values, errors })
-
   return (
     <Flex flexDir="row" w="100vw" h="100vh">
       <Flex
@@ -42,11 +40,12 @@ export const LoginScreen = () => {
           <Input
             id="email"
             name="email"
+            type="email"
             value={values.email}
-            mt="24px"
-            placeholder="email@exemplo.com"
             onChange={handleChange}
             error={errors.email}
+            mt="24px"
+            placeholder="email@exemplo.com"
           />
           <Input.Password
             id="password"
