@@ -7,12 +7,13 @@ export const LoginScreen = () => {
       <Flex
         alignItems="flex-start"
         justifyContent="center"
-        pl="7rem"
+        pl={['0px', '0px', '0px', '112px']}
+        padding={['24px', '48px', '80px', '16px']}
         flexDir="column"
-        w="40%"
+        w={['100%', '100%', '100%', '40%']}
         h="100vh"
       >
-        <Flex flexDir="column" w="84%">
+        <Flex flexDir="column" w={['100%', '100%', '100%', '84%']}>
           <Image src="/img/logo.svg" alt="BookClub logo" w="160px" h="48px" />
           <Text.ScreenTitle mt="48px">Login</Text.ScreenTitle>
           <Input mt="24px" placeholder="email@exemplo.com" />
@@ -34,7 +35,7 @@ export const LoginScreen = () => {
         </Flex>
       </Flex>
       <Flex
-        w="60%"
+        w={['0%', '0%', '0%', '60%']}
         h="100vh"
         backgroundImage="url(/img/auth_background.svg)"
         backgroundSize="cover"
