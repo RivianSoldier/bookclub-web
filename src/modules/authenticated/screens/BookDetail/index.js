@@ -91,8 +91,8 @@ export const BookDetailScreen = () => {
         paddingX={['24px', '48px', '80px', '112px']}
       >
         <Flex
-          h={['256px', '358px']}
-          w={['170px', '238px']}
+          h={['276px', '358px']}
+          w={['190px', '290px']}
           backgroundImage={`${data?.data?.book?.cover_url}`}
           backgroundSize="cover"
           backgroundPosition="center"
