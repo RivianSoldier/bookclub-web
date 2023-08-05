@@ -7,7 +7,7 @@ export const CategoryCard = ({ onClick, name, selected }) => {
       onClick={onClick}
       alignItems="center"
       justifyContent="center"
-      h="36px"
+      h="40px"
       px="14px"
       py="12px"
       borderStyle="solid"
