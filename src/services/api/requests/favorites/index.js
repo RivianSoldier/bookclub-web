@@ -13,3 +13,10 @@ export const deleteBookFromFavorite = (id) =>
       Authorization: `bearer ${localStorage.getItem('@bookclub_token')}`
     }
   })
+
+export const getFavorites = () =>
+  api.get('/userbook', {
+    headers: {
+      Authorization: `bearer ${localStorage.getItem('@bookclub_token')}`
+    }
+  })
