@@ -1,8 +1,14 @@
+import { useState } from 'react'
 import { Flex, Image } from '@chakra-ui/react'
 import { SearchBar, UserMenu } from 'components/molecules'
 import { useNavigate } from 'react-router-dom'
+import { UserModal } from './UserModal'
 
 export const NavBar = ({ query, setQuery }) => {
+  const [showModal, setShowModal] = useState()
+  const onCloseModal = () => {
+    setShowModal(null)
+  }
   const navigate = useNavigate()
   return (
     <Flex
@@ -31,7 +37,8 @@ export const NavBar = ({ query, setQuery }) => {
         <SearchBar query={query} setQuery={setQuery} />
       </Flex>
       <Flex w={['30%', '40%']} alignItems="end" justifyContent="flex-end">
-        <UserMenu />
+        <UserMenu setShowModal={setShowModal} />
+        {showModal === 'user' && <UserModal onClose={onCloseModal} />}
       </Flex>
     </Flex>
   )
