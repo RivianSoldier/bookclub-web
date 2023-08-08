@@ -11,7 +11,7 @@ export const SearchBar = ({ query, setQuery }) => {
     }
   }
   return (
-    <Flex w="45%" h="52px" bg="brand.greyLight" borderRadius="12px">
+    <Flex w="100%" h="52px" bg="brand.greyLight" borderRadius="12px">
       <InputGroup>
         <InputLeftElement h="100%">
           <SearchIcon color="brand.greyDark" />

@@ -28,32 +28,28 @@ export const NavBar = ({ query, setQuery }) => {
     navigate('/')
   }
   return (
-    <Flex
-      w="100vw"
-      flexDir="row"
-      alignItems="center"
-      justifyContent="space-between"
-      paddingX={['24px', '48px', '80px', '112px']}
-      overflowX="hidden"
-      paddingTop="24px"
-    >
-      <Image
-        src="/img/logo.svg"
-        alt="BookClub logo"
-        w={['90px', '160px']}
-        h="48px"
-        cursor="pointer"
-        onClick={() => navigate('/home')}
-      />
+    <>
       <Flex
+        w="100vw"
+        maxW="100vw"
+        flexDir="row"
         alignItems="center"
-        justifyContent="center"
-        display={['none', 'flex']}
-        w={['90%', '100%']}
+        justifyContent="space-between"
+        paddingX={['24px', '48px', '80px', '112px']}
+        overflowX="hidden"
+        paddingTop="24px"
       >
-        <SearchBar query={query} setQuery={setQuery} />
-      </Flex>
-      <Flex w={['30%', '40%']} alignItems="end" justifyContent="flex-end">
+        <Image
+          src="/img/logo.svg"
+          alt="BookClub logo"
+          w={['100px', '160px']}
+          h="48px"
+          cursor="pointer"
+          onClick={() => navigate('/home')}
+        />
+        <Flex display={['none', 'flex']} w="40%">
+          <SearchBar query={query} setQuery={setQuery} />
+        </Flex>
         <UserMenu onLogout={onLogout} setShowModal={setShowModal} />
         {showModal === 'user' && <UserModal onClose={onCloseModal} />}
         {showModal === 'password' && <PasswordModal onClose={onCloseModal} />}
@@ -62,6 +58,14 @@ export const NavBar = ({ query, setQuery }) => {
           <PrivacyPolicyModal onClose={onCloseModal} />
         )}
       </Flex>
-    </Flex>
+      <Flex
+        mt="16px"
+        paddingX={['24px', '48px', '80px', '112px']}
+        w="100%"
+        display={['flex', 'none']}
+      >
+        <SearchBar query={query} setQuery={setQuery} />
+      </Flex>
+    </>
   )
 }
