@@ -7,7 +7,7 @@ import { BsBookmarkStar } from 'react-icons/bs'
 import { BiUser, BiCheckShield, BiFile, BiLogOut } from 'react-icons/bi'
 import { HiOutlineClipboard } from 'react-icons/hi'
 
-export const UserMenu = ({ setShowModal }) => {
+export const UserMenu = ({ setShowModal, onLogout }) => {
   const userStore = useSelector((state) => state.user)
   const navigate = useNavigate()
 
@@ -38,7 +38,7 @@ export const UserMenu = ({ setShowModal }) => {
       icon: BiFile,
       text: 'Termos de uso',
       divider: false,
-      onClick: () => navigate('/')
+      onClick: () => setShowModal('terms')
     },
     {
       id: 4,
@@ -52,7 +52,7 @@ export const UserMenu = ({ setShowModal }) => {
       icon: BiLogOut,
       text: 'Logout',
       divider: false,
-      onClick: () => navigate('/')
+      onClick: () => onLogout()
     }
   ]
 
