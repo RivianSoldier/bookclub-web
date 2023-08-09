@@ -9,7 +9,7 @@ The user can search for books and authors, get their info and favorite the books
 
 ## Live Version
 
-<https://bookclub-ib6tj4p7v-riviansoldier.vercel.app/>
+<https://bookclub-nu.vercel.app/>
 
 ## Techs Used
 
